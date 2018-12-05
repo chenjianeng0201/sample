@@ -13,6 +13,7 @@
 </head>
 <body>
     @include('layouts._header')
+    @include('shared._message')
 	@yield('content')
     @include('layouts._footer')
     <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
