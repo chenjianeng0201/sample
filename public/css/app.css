@@ -8350,6 +8350,10 @@ button.close {
   }
 }
 
+#slide_show {
+  width: 100% !important;
+}
+
 .right {
   float: right;
 }

@@ -2,16 +2,19 @@
 <html>
 <head>
 	<title>@yield('title', 'Sample App')</title>
+    <meta charset="utf-8">
+    {{--CSRF_TOKEN--}}
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
 	<link rel="stylesheet" type="text/css" href="{{ asset('layui/css/layui.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
 	<script type="text/javascript" src="{{ asset('layui/layui.js') }}"></script>
 	@stack('scripts')
 </head>
 <body>
-	<ul class="layui-nav" lay-filter="">
-		<li class="layui-nav-item layui-this"><a href="#">首页</a></li>
-		<li class="layui-nav-item"><a href="#">帮助</a></li>
-		<li class="layui-nav-item right"><a href="#">登陆</a></li>
-	</ul>
+    @include('layouts._header')
 	@yield('content')
+    @include('layouts._footer')
+    <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

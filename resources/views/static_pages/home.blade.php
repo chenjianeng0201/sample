@@ -9,20 +9,6 @@
 		<div>轮播4</div>
 	</div>
 </div>
-<form class="layui-form">	
-<div class="layui-form-item">
-	<label class="layui-label"></label>	
-	<div class="layui-input-inline">
-		<input type="text" name="test" class="layui-input" value="" placeholder="test">	
-	</div>
-</div>
-<div class="layui-form-item">
-	<label class="layui-label"></label>
-	<div class="layui-input-inline">
-		<a href="#" class="layui-btn layui-btn-normal">现在注册</a>
-	</div>
-</div>
-</form>
 
 @push('scripts')
 	<script src="{{ asset('js/static_pages/home.js') }}"></script>
