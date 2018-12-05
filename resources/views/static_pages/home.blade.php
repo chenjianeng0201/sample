@@ -10,7 +10,14 @@
 	</div>
 </div>
 
-@push('scripts')
-	<script src="{{ asset('js/static_pages/home.js') }}"></script>
-@endpush
+<script type="text/javascript">
+    layui.use(['carousel'], function(){
+        var carousel = layui.carousel;
+
+        carousel.render({
+            elem: '#slide_show',
+            arrow: 'always',
+        });
+    });
+</script>
 @stop
