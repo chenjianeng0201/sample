@@ -4,7 +4,7 @@
     <div class="container">
         @include('shared._error')
         <fieldset class="layui-elem-field">
-            <legend>登陆</legend>
+            <legend>登录</legend>
             <div class="layui-field-box">
                 <form class="layui-form" method="post" action="{{ route('login') }}">
                     {{ csrf_field() }}
@@ -23,7 +23,7 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label"></label>
                         <div class="layui-input-inline">
-                            <button type="submit" class="layui-btn layui-btn-normal">登陆</button>
+                            <button type="submit" class="layui-btn layui-btn-normal">登录</button>
                         </div>
                     </div>
                     <div class="layui-form-item">
@@ -36,6 +36,7 @@
                     <div class="layui-form-item">
                         <label class="layui-form-label"></label>
                         <div class="layui-input-inline">
+                            <a href="{{ route('password.request') }}">忘记密码？</a>
                             <a href="{{ route('signup') }}">现在注册</a>
                         </div>
                     </div>

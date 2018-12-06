@@ -15,7 +15,7 @@
             <a href="{{ route('users.index') }}">用户列表</a>
         </li>
         @else
-        <li class="layui-nav-item right @if(Route::is('login')) layui-this @endif"><a href="{{ route('login') }}">登陆</a></li>
+        <li class="layui-nav-item right @if(Route::is('login')) layui-this @endif"><a href="{{ route('login') }}">登录</a></li>
         <li class="layui-nav-item right @if(Route::is('signup')) layui-this @endif"><a href="{{ route('signup') }}">注册</a></li>
     @endif
 </ul>

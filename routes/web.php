@@ -25,6 +25,11 @@ Route::get('logout', 'SessionController@destory')->name('logout');
 
 Route::get('signup/confirm/{token}', 'UsersController@confirmEmail')->name('confirm_email');
 
+Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('password.update');
+
 
 // 常规操作，建议用以下方式，可以统一规范
 // Route::resource('tests', 'TestsController', ['only' => ['index', 'create', 'store', 'update', 'edit', 'destroy']]);
