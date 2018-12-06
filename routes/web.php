@@ -23,6 +23,8 @@ Route::get('login', 'SessionController@create')->name('login');
 Route::post('login', 'SessionController@store')->name('login');
 Route::get('logout', 'SessionController@destory')->name('logout');
 
+Route::get('signup/confirm/{token}', 'UsersController@confirmEmail')->name('confirm_email');
+
 
 // 常规操作，建议用以下方式，可以统一规范
 // Route::resource('tests', 'TestsController', ['only' => ['index', 'create', 'store', 'update', 'edit', 'destroy']]);
