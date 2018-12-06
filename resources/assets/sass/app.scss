@@ -28,3 +28,18 @@
 
 }
 
+/* Statuses _status */
+#user_statuses {
+    .gravatar {
+        height: 50px;
+    }
+
+    li {
+        padding: 10px 0;
+        border-bottom: 1px solid #9F9F9F;
+    }
+    .layui-input-block{
+        margin-left: 50px !important;
+    }
+}
+

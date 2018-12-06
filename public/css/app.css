@@ -8381,3 +8381,18 @@ button.close {
   width: 500px !important;
 }
 
+/* Statuses _status */
+
+#user_statuses .gravatar {
+  height: 50px;
+}
+
+#user_statuses li {
+  padding: 10px 0;
+  border-bottom: 1px solid #9F9F9F;
+}
+
+#user_statuses .layui-input-block {
+  margin-left: 50px !important;
+}
+
