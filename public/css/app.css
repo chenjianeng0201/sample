@@ -8366,3 +8366,18 @@ button.close {
   width: 260px !important;
 }
 
+/* Users index */
+
+#all_users .gravatar {
+  height: 50px;
+}
+
+#all_users li {
+  padding: 10px 0;
+  border-bottom: 1px solid #9F9F9F;
+}
+
+#all_users .all_user_info {
+  width: 500px !important;
+}
+

@@ -11,3 +11,20 @@
 .layui-input-inline{
     width: 260px !important;
 }
+
+
+/* Users index */
+#all_users{
+    .gravatar{
+        height: 50px;
+    }
+    li{
+        padding: 10px 0;
+        border-bottom: 1px solid #9F9F9F;
+    }
+    .all_user_info{
+        width: 500px !important;
+    }
+
+}
+
