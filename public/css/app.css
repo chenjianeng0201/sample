@@ -8366,33 +8366,38 @@ button.close {
   width: 260px !important;
 }
 
-/* Users index */
+/* Statuses _status */
 
-#all_users .gravatar {
+.statuses .gravatar {
   height: 50px;
 }
 
-#all_users li {
+.statuses li {
   padding: 10px 0;
   border-bottom: 1px solid #9F9F9F;
 }
 
-#all_users .all_user_info {
+.statuses .all_user_info {
   width: 500px !important;
 }
 
-/* Statuses _status */
-
-#user_statuses .gravatar {
-  height: 50px;
-}
-
-#user_statuses li {
-  padding: 10px 0;
-  border-bottom: 1px solid #9F9F9F;
-}
-
-#user_statuses .layui-input-block {
+.statuses .layui-input-block {
   margin-left: 50px !important;
+}
+
+/* Layouts _header */
+
+.layui-nav a {
+  text-decoration: none;
+}
+
+/* Shared _status_form */
+
+#statuses_store .layui-form-item {
+  padding: 20px;
+}
+
+#statuses_store button {
+  margin: 20px 0;
 }
 

@@ -1,4 +1,5 @@
 <hr>
 <div class="container">
-    <p class="right">chenjianeng</p>
+    <span>刻意练习，每日精进</span>
+    <span class="right">chenjianeng</span>
 </div>

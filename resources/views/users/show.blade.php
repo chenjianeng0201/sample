@@ -5,8 +5,8 @@
         @include('shared._user_info', ['user'=>$user])
         @if(count($statuses) > 0)
             <ol id="user_statuses">
-                @foreach($statuses as $status)
-                    @include('statuses._status')
+                @foreach($statuses as $key => $status)
+                    @include('statuses._status', ['key' => $key])
                 @endforeach
             </ol>
             {!! $statuses->render() !!}

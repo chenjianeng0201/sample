@@ -6,7 +6,7 @@
         <li class="layui-nav-item right @if(Route::is('users.*')) layui-this @endif" lay-unselect="">
             <a href="javascript:;"><img src="{{ Auth::user()->gravatar('140') }}" alt="{{ Auth::user()->name }}" class="layui-nav-img" /></a>
             <dl class="layui-nav-child">
-                <dd><a href="javascript:;">个人中心</a></dd>
+                <dd><a href="{{ route('users.show', Auth::user()->id) }}">个人中心</a></dd>
                 <dd><a href="{{ route('users.edit', Auth::user()->id) }}">编辑资料</a></dd>
                 <dd><a href="{{ route('logout')}}">退出</a></dd>
             </dl>

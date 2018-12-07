@@ -6,7 +6,7 @@
         {{ $user->name }}
 
     </a>
-    <span class="right">{{ $status->created_at->diffForHumans() }}</span>
+    <span class="right">{{ $status->created_at->diffForHumans() }} #{{ $key+1 }}</span>
     <div class="layui-input-block">
         {{ $status->content }}
     </div>

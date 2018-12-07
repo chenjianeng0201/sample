@@ -30,6 +30,7 @@ Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('password.update');
 
+Route::resource('statuses', 'StatusesController', ['only' => ['store', 'destroy']]);
 
 // 常规操作，建议用以下方式，可以统一规范
 // Route::resource('tests', 'TestsController', ['only' => ['index', 'create', 'store', 'update', 'edit', 'destroy']]);

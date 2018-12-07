@@ -9,6 +9,13 @@
 		<div>轮播4</div>
 	</div>
 </div>
+<div class="container">
+    <section>
+        @include('shared._status_form')
+    </section>
+    <h3>微博列表</h3>
+    @include('shared._feed')
+</div>
 
 <script type="text/javascript">
     layui.use(['carousel'], function(){

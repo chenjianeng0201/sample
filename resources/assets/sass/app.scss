@@ -12,9 +12,8 @@
     width: 260px !important;
 }
 
-
-/* Users index */
-#all_users{
+/* Statuses _status */
+.statuses{
     .gravatar{
         height: 50px;
     }
@@ -25,21 +24,24 @@
     .all_user_info{
         width: 500px !important;
     }
-
-}
-
-/* Statuses _status */
-#user_statuses {
-    .gravatar {
-        height: 50px;
-    }
-
-    li {
-        padding: 10px 0;
-        border-bottom: 1px solid #9F9F9F;
-    }
     .layui-input-block{
         margin-left: 50px !important;
+    }
+}
+/* Layouts _header */
+.layui-nav{
+    a{
+        text-decoration:none;
+    }
+}
+
+/* Shared _status_form */
+#statuses_store{
+    .layui-form-item{
+        padding: 20px;
+    }
+    button{
+        margin: 20px 0;
     }
 }
 
