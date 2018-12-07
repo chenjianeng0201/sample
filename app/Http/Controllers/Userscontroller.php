@@ -13,7 +13,7 @@ class UsersController extends Controller
     public function __construct()
     {
         $this->middleware('auth', [
-           'except' => ['show', 'create', 'store', 'index', 'confirmEmail']
+            'except' => ['show', 'create', 'store', 'index', 'confirmEmail']
         ]);
 
         $this->middleware('guest', [
@@ -34,7 +34,6 @@ class UsersController extends Controller
 
     public function show(User $user)
     {
-        $this->authorize('update', $user);
         $statuses = $user->statuses()
             ->orderBy('created_at', 'desc')
             ->paginate(30);
@@ -44,9 +43,9 @@ class UsersController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-           'name' => 'required|max:50',
-           'email' => 'required|email|unique:users|max:255',
-            'password'=> 'required|confirmed|min:6'
+            'name' => 'required|max:50',
+            'email' => 'required|email|unique:users|max:255',
+            'password' => 'required|confirmed|min:6'
         ]);
 
         $user = User::create([
@@ -78,7 +77,7 @@ class UsersController extends Controller
 
         $data = [];
         $data['name'] = $request->name;
-        if($request->password){
+        if ($request->password) {
             $data['password'] = bcrypt($request->password);
         }
         $user->update($data);
@@ -122,4 +121,17 @@ class UsersController extends Controller
         return redirect()->route('users.show', [$user]);
     }
 
+    public function followings(User $user)
+    {
+        $users = $user->followings()->paginate(30);
+        $title = '关注的人';
+        return view('users.show_follow', compact('users', 'title'));
+    }
+
+    public function followers(User $user)
+    {
+        $users = $user->followers()->paginate(30);
+        $title = '粉丝';
+        return view('users.show_follow', compact('users', 'title'));
+    }
 }

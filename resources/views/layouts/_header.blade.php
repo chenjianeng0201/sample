@@ -3,7 +3,7 @@
     <li class="layui-nav-item @if(Route::is('help')) layui-this @endif"><a href="{{ route('help') }}">帮助</a></li>
     <li class="layui-nav-item @if(Route::is('about')) layui-this @endif"><a href="{{ route('about') }}">关于</a></li>
     @if( Auth::check())
-        <li class="layui-nav-item right @if(Route::is('users.*')) layui-this @endif" lay-unselect="">
+        <li class="layui-nav-item right @if(Route::is('users.*') && Route::isNot('users.index')) layui-this @endif" lay-unselect="">
             <a href="javascript:;"><img src="{{ Auth::user()->gravatar('140') }}" alt="{{ Auth::user()->name }}" class="layui-nav-img" /></a>
             <dl class="layui-nav-child">
                 <dd><a href="{{ route('users.show', Auth::user()->id) }}">个人中心</a></dd>
@@ -11,7 +11,7 @@
                 <dd><a href="{{ route('logout')}}">退出</a></dd>
             </dl>
         </li>
-        <li class="layui-nav-item right">
+        <li class="layui-nav-item right @if(Route::is('users.index')) layui-this @endif">
             <a href="{{ route('users.index') }}">用户列表</a>
         </li>
         @else
