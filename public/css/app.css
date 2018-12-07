@@ -8383,6 +8383,11 @@ button.close {
 
 .statuses .layui-input-block {
   margin-left: 50px !important;
+  width: 1000px !important;
+}
+
+.statuses .paginate {
+  text-align: center;
 }
 
 /* Layouts _header */

@@ -26,6 +26,10 @@
     }
     .layui-input-block{
         margin-left: 50px !important;
+        width: 1000px !important;
+    }
+    .paginate{
+        text-align: center;
     }
 }
 /* Layouts _header */
@@ -34,6 +38,7 @@
         text-decoration:none;
     }
 }
+
 
 /* Shared _status_form */
 #statuses_store{

@@ -3,6 +3,9 @@
         @foreach ($feed_items as $key => $status)
             @include('statuses._status', ['user' => $status->user, 'key' => $key])
         @endforeach
-        {!! $feed_items->render() !!}
+        <div class="layui-form-item paginate">
+            {!! $feed_items->render() !!}
+        </div>
+
     </ol>
 @endif
